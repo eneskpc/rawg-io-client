@@ -4,6 +4,7 @@ import Switch from "components/Switch";
 import { useAppDispatch } from "helpers/redux-helper";
 import { classNames } from "helpers/string-helper";
 import { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 import { toggleDarkMode } from "store/options";
 
 import navigation from "./navigation";
@@ -42,9 +43,9 @@ const Header = () => {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <NavLink
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
@@ -54,7 +55,7 @@ const Header = () => {
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </NavLink>
                     ))}
                   </div>
                 </div>

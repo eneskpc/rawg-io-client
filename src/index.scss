@@ -12,7 +12,7 @@
       @apply font-extrabold text-2xl;
     }
     & + .section-after-hover {
-      @apply p-4 absolute rounded-b-2xl bg-white dark:bg-slate-800 w-full top-[calc(100%-30px)];
+      @apply p-4 absolute rounded-b-2xl bg-white dark:bg-slate-800 w-full top-[calc(100%-10px)] border-t-[1px];
     }
   }
 }
